@@ -14,9 +14,9 @@ Signed-off-by: John Thomson <git@johnthomson.fastmail.com.au>
 
 --- a/include/dahdi/kernel.h
 +++ b/include/dahdi/kernel.h
-@@ -58,6 +58,10 @@
- 
- #include <linux/poll.h>
+@@ -62,6 +62,10 @@
+ #define netif_napi_add netif_napi_add_weight
+ #endif
  
 +#if LINUX_VERSION_CODE >= KERNEL_VERSION(6, 1, 0)
 +#define netif_napi_add netif_napi_add_weight
